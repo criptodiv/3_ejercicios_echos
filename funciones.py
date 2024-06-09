@@ -13,8 +13,12 @@ def nombre_mas_largo(p_lista):
                 nombre_mas_largo = p_lista[x]
     print("EL nombre más largo es: ",nombre_mas_largo)
 
-
 def almacenar_datos (p_personas):
     with open("nombre_apellido.csv","w",newline="") as arc:
+        escritor = csv.writer(arc)
+        escritor.writerows(p_personas)
+
+def almacenar_datos_3 (p_personas):
+    with open("nombre_apellido_edad.csv","w",newline="") as arc:
         escritor = csv.writer(arc)
         escritor.writerows(p_personas)
